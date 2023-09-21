@@ -16,26 +16,26 @@ function module(num1, num2){
 $(document).ready(function(){
   $("#calculator").submit(function(event){
     event.preventDefault();
-    const firstInput = parseInt($("#numberOne").val());
-    const secondInput = parseInt($("#numberTwo").val());
+    let firstInput = parseInt($("#numberOne").val());
+    let secondInput = parseInt($("#numberTwo").val());
 
     let result = add(firstInput, secondInput);
-    let result2 = subtract(firstInput, secondInput);
+
 
 
     $(".answer").text(result);
     $(".display").show();
-  })
-  $("#calculator2").submit(function(event){
-    event.preventDefault();
-    const firstInput = parseInt($("#numberOne").val());
-    const secondInput = parseInt($("#numberTwo").val());
+  });
+  $("#calculator2").submit(function(reload){
+    reload.preventDefault();
+    let firstInput = parseInt($("#numberOneB").val());
+    let secondInput = parseInt($("#numberTwoB").val());
 
+    let result = subtract(firstInput, secondInput);
+    console.log(result)
 
-    let result2 = subtract(firstInput, secondInput);
+    $("#answer").text(result);
+    $(".display").show();
 
-
-    $(".answer2").text(result2);
-    $(".display2").show();
   })
 })
