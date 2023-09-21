@@ -50,4 +50,29 @@ $(document).ready(function(){
     $(".display2").show();
 
   });
+  $("#calculator4").submit(function(page){
+    page.preventDefault();
+    let firstInput = parseInt($("#numberOneD").val());
+    let secondInput = parseInt($("#numberTwoD").val());
+
+    let result = multiply(firstInput, secondInput);
+    console.log(result)
+
+    $("#answer2").text(result);
+    $(".display2").show();
+
+  });
+  $("#calculator5").submit(function(mode){
+    mode.preventDefault();
+    let firstInput = parseInt($("#numberOneE").val());
+    let secondInput = parseInt($("#numberTwoE").val());
+
+    let result = module(firstInput, secondInput);
+    console.log(result)
+
+    $(".answer3").text(result);
+    $(".display3").show();
+
+  });
+  
 })
