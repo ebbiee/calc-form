@@ -37,5 +37,17 @@ $(document).ready(function(){
     $("#answer").text(result);
     $(".display").show();
 
-  })
+  });
+  $("#calculator3").submit(function(page){
+    page.preventDefault();
+    let firstInput = parseInt($("#numberOneC").val());
+    let secondInput = parseInt($("#numberTwoC").val());
+
+    let result = divide(firstInput, secondInput);
+    console.log(result)
+
+    $(".answer2").text(result);
+    $(".display2").show();
+
+  });
 })
